@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="gallery">
+                <img src="seltos.jpg " id="productImg"/>
+                <div class="controls">
+                    <span class="btn active"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+            </div>
+            <div class="details">
+                <h1>Kia Seltos</h1>
+                <h2>P1,378.000</h2>
+                <h3>%20 discount</h3>
+                <p>The Kia Seltos is a stylish and roomy SUV with plenty
+                    of the latest technology and safety features1.
+                    It offers good value for the class,
+                    especially with its standard features,
+                    but the top SX trim can be pricey2. However,
+                    the interior materials feel cheap and the
+                    overly active safety equipment
+                    can be a drawback3.</p>
+                <form>
+                    <div class="size-select">
+                        <p>Vts:</p>
+                        <label for="S">
+                            <input type="radio" name="size" id="S">
+                            <span>S Vt</span>
+                        </label>
+                        <label for="LX">
+                            <input type="radio" name="size" id="LX">
+                            <span>LX Vt</span>
+                        </label>
+                        <label for="Nightfall">
+                            <input type="radio" name="size" id="Nightfall">
+                            <span>Nf Vt</span>
+                        </label>
+                        <label for="SX">
+                            <input type="radio" name="size" id="SX">
+                            <span>SX Vt</span>
+                        </label>
+
+                    </div>
+                    <div class="color-select">
+                        <p>Color:</p>
+                        <label for="Gravity Grey">
+                            <input type="radio" name="color" id="Gravity Grey">
+                            <span class="color1"></span>
+                        </label>
+                        <label for="Iron Grey">
+                            <input type="radio" name="color" id="Iron Grey">
+                            <span class="color2"></span>
+                        </label>
+                        
+                        <label for="Clear White">
+                            <input type="radio" name="color" id="Clear White">
+                            <span class="color3"></span>
+                        </label>
+                        <label for="Dark Ocean Blue">
+                            <input type="radio" name="color" id="Dark Ocean Blue">
+                            <span class="color4"></span>
+                        </label>
+                    </div>
+                    <div class="quantity-select">
+                        <p>Quantity</p>
+                        <input type="number" value="1">
+                    </div>
+                    <button>Buy now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const productImg = document.getElementById("productImg");
+        const btn = document.getElementsByClassName("btn");
+
+        btn[0].onclick = function(){
+            productImg.src = "seltos.jpg";
+
+            for(bt of btn){
+                bt.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[1].onclick = function(){
+            productImg.src = "seltos1.jpg";
+
+            for(bt of btn){
+                bt.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[2].onclick = function(){
+            productImg.src = "seltos2.jpg";
+
+            for(bt of btn){
+                bt.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        
+
+    </script>
+</body>
+
+</html>
